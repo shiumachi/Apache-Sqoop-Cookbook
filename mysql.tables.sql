@@ -30,6 +30,14 @@ CREATE TABLE `cities_export` (
   PRIMARY KEY (`id`)
 );
 
+-- Create table cities (staging table for export)
+CREATE TABLE `staging_cities` (
+  `id` INTEGER UNSIGNED NOT NULL,
+  `country` VARCHAR(50),
+  `city` VARCHAR(150),
+  PRIMARY KEY (`id`)
+);
+
 -- Insert 3 example lines into table cities
 INSERT INTO `cities`(`id`, `country`, `city`) VALUES (1, "USA", "Palo Alto");
 INSERT INTO `cities`(`id`, `country`, `city`) VALUES (2, "Czech Republic", "Brno");
