@@ -83,3 +83,11 @@ CREATE TABLE `visits` (
 -- Insert couple of records to table visits
 INSERT INTO `visits`(`id`, `city`, `last_update_date`) VALUES(1, "Freemont", "1983-05-22 01:01:01");
 INSERT INTO `visits`(`id`, `city`, `last_update_date`) VALUES(2, "Jicin", "1987-02-02 02:02:02");
+
+-- Create sample procedure for Ch5.6
+DELIMITER //
+CREATE PROCEDURE populate_cities(IN id INT, IN country VARCHAR(50), IN city VARCHAR(150))
+BEGIN
+SELECT NOW();
+END; //
+DELIMITER ;
